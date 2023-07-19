@@ -53,6 +53,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
 
   final PhoneNumber? initialValue;
   final String? hintText;
+  final TextStyle? hintStyle;
   final String? errorMessage;
 
   final double selectorButtonOnErrorPadding;
@@ -114,6 +115,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
       this.countrySelectorScrollControlled = true,
       this.locale,
       this.textStyle,
+        this.hintStyle,
       this.selectorTextStyle,
       this.inputBorder,
       this.inputDecoration,
@@ -288,6 +290,7 @@ class _InputWidgetState extends State<InternationalPhoneNumberInput> {
         InputDecoration(
           border: widget.inputBorder ?? UnderlineInputBorder(),
           hintText: widget.hintText,
+          hintStyle: widget.hintStyle,
         );
 
     if (widget.selectorConfig.setSelectorButtonAsPrefixIcon) {
